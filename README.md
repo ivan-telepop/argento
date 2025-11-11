@@ -33,10 +33,8 @@
 - запускаем в директории с проектом ` docker compose up `
 
 ---
-#### Для корректоной работы OpenAI ассистента необходим VPN или сервис должен быть запущен не в РФ.
----
 
-####  c u r r e n t  состояние:
+<!-- ####  текущее состояние:
 
 - скрипт entrypoint.sh автоматически создает superuser, миграции, и запускает бота.
 
@@ -51,13 +49,13 @@
 - Faiss vector store
 
 
----
+--- -->
 
 
 
 #### URL с параметрами для `POST` запроса
 
-> [!NOTICE]
+> [!NOTE]
 > URL должен соответствовать вашему домену или имени хоста в docker.
 
  ```http://localhost:8000/send_user_query_data/?name=Jichael%20Mackson&email=juchael.mackson%40gmail.com&phone=%+79883442299&comment=Jichael_Mackson%&topic=Helloworld&contact=Мои&Контакты```
