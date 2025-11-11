@@ -5,4 +5,5 @@ README.md
 __pycache__
 db.sqlite3
 productionfiles
+local_entrypoint.sh
 

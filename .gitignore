@@ -10,3 +10,4 @@ info-helper.txt
 productionfiles
 nginx.conf
 .vscode
+local_entrypoint.sh

@@ -76,3 +76,43 @@ Frontend — простая форма для ввода запроса и от�
 
 
 
+# Если хотим запуститься локально DEBUG (Local Setup):
+
+Создаем в рабочей директории .env файл (референс .env_example)
+
+- Устанавливаем при помощи Pyenv версию интерпритатора (Python 3.11) для проекта.
+- Создаем окружение `pyenv virtualenv 3.11 argento_venv`
+- Активируем окружение `pyenv activate argento_venv`
+- Устанвливаем зависимости `pip install -r requirements.txt`
+- Создаем миграции `python manage.py makemigrations`
+- Пишем миграции в БД `python manage.py migrate`
+- Создаем автоматически (Django Commands) суперюзера для доступа к админке `python manage.py superuser_create` (Не забыть указать нужные параметры в файле .env)
+- Или можем создать суперюзера стандартным методом `python manage.py createsuperuser` отвечаем на вопросы...
+
+Можем создать скрипт sh с теми же командами:
+
+```bash
+#!/bin/sh
+
+pyenv virtualenv 3.11 argento_venv
+
+pyenv activate argento_venv
+
+pip install -r requirements.txt
+
+cd ./botlog
+
+python manage.py makemigrations --no-input
+
+python manage.py migrate --no-input
+
+python manage.py collectstatic --no-input
+
+python manage.py superuser_create
+
+
+python manage.py runserver 0.0.0.0:8000 & python manage.py bot_notify
+
+# exit
+
+```
