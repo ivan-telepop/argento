@@ -86,7 +86,7 @@ class TelegramBotDialogModel(models.Model):
         verbose_name_plural = "Записи диалогов с ботом"
         
         
-class ConrextRAGModel(models.Model):
+class ContextRAGModel(models.Model):
     """Context model!
     * username: str
     * prompt: str
@@ -95,7 +95,27 @@ class ConrextRAGModel(models.Model):
     """
     pass
 
-    
+
+
+# def user_directory_path(request, filename):
+#     "Function that creates user defined filename"
+#     return f"user/{request.user.id}/{filename}"
+
+        
+class FileUploadModel(models.Model):
+    """ PDF File that is uploaded by user for RAG workflow
+
+    Args:
+        pdf_document: file name also path
+        created: date
+    """
+    pdf_document = models.FileField(upload_to='pdf')
+    created = models.DateField(auto_now=True,verbose_name="Дата создания")
+    def __str__(self):
+        return f"File Path: {self.pdf_document.path}   Created: {self.created}"
+    class Meta:
+        verbose_name = "Файл PDF"
+        verbose_name_plural = "Файлы PDF"
 
 
             

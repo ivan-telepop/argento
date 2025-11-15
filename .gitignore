@@ -11,3 +11,4 @@ productionfiles
 nginx.conf
 .vscode
 local_entrypoint.sh
+note_helper.txt

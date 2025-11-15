@@ -119,4 +119,21 @@ python manage.py runserver 0.0.0.0:8000 & python manage.py bot_notify
 
 - Запускаем модель (например Llama3.2) - `ollama run llama3.2`
 
+---
+
+## Вариант RAG 
+
+---
+
+- Скачиваем модель для эмбедингов - `ollama pull all-minilm` - (выбираем нужную модель) 
+
+#### Example embedding models - Модели для эмбедингов
+Model	Parameter Size	
+mxbai-embed-large	334M	
+nomic-embed-text	137M
+all-minilm          23M
+
+---
+
+#### Подробнее - `https://ollama.com/blog/embedding-models`
 

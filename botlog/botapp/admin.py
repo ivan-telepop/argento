@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import Group,User
 from import_export import resources
 from import_export.admin import ImportExportActionModelAdmin, ImportExportMixin
-from .models import TelegramBotDialogModel,TelegramUserContactModel,UserContactModel
+from .models import TelegramBotDialogModel,TelegramUserContactModel,UserContactModel, FileUploadModel
 import openpyxl
 from datetime import datetime as dt
 from admin_extra_urls.api import button,ExtraUrlMixin
@@ -105,6 +105,8 @@ class UserContactModelAdmin(ExtraUrlMixin,ImportExportActionModelAdmin,ImportExp
         return export_excel_file()
     
     
+
+    
    
 
 
@@ -135,12 +137,16 @@ class TelegramBotDialogModelAdmin(ExtraUrlMixin,ImportExportActionModelAdmin,Imp
         return export_excel_file()
     
     
-    
+# class FileUploadModelAdmin(admin.ModelAdmin):
+#     def save_model(self, request, obj, form, change):
+        # obj.user = request.user
+        # super().save_model(request, obj, form, change)
     
 # Register on Admin Panel    
 admin.site.register(TelegramUserContactModel,TelegramUserContactModelAdmin)
 admin.site.register(UserContactModel,UserContactModelAdmin)
 admin.site.register(TelegramBotDialogModel,TelegramBotDialogModelAdmin)
+admin.site.register(FileUploadModel)
 
 
 
@@ -149,7 +155,7 @@ admin.site.register(TelegramBotDialogModel,TelegramBotDialogModelAdmin)
 # admin.site.unregister(Group)
 
 # Django Admin settings: title | header | index text
-admin.site.site_header = "BP Marketing BOT - администрирование"
-admin.site.index_title = "BP - BusinessPad"
+admin.site.site_header = "Argento App- администрирование"
+admin.site.index_title = "Argento - Application"
 
 
