@@ -33,7 +33,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # path to pdf files directory - test path
-pdf_files_directory = '/home/ewan/Desktop/Dev/argento/botlog/pdf/Grant_Bank_01.pdf'#Path(os.path.join(BASE_DIR).join(['/pdf/']) )     #str(BASE_DIR) + '/pdf'
+pdf_files_directory = '/home/ewan/Desktop/Dev/argento/botlog/pdf/Ivan_Goncharov_RAG.pdf'#Path(os.path.join(BASE_DIR).join(['/pdf/']) )     #str(BASE_DIR) + '/pdf'
 
 
 print(pdf_files_directory)
