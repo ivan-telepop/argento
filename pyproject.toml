@@ -1,7 +1,69 @@
 [project]
-name = "bot-station-project"
+name = "argento-project"
 version = "1.0.0"
+
+description = "A web based application that helps to run LLM models also generate text and reasoning,based on documents (RAG), and tool calls"
+readme = "README.md"
+authors = [{ name = "Ivan Goncharov", email = "telepop.iv@gmail.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+]
+keywords = [
+    "models",
+    "Python",
+    "projects",
+    "project templates",
+    "Django",
+    "skeleton",
+    "scaffolding",
+    "project directory",
+    "package",
+    "packaging",
+]
+dependencies = [
+    "binaryornot>=0.4.4",
+    "Django>=5.7,<4.0.0",
+    "",
+    "",
+
+]
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://github.com/telepop/argento"
+Documentation = "***https://argento.readthedocs.io***"
+Issues = "https://____"
+Discord = "https://discord.gg/____"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [tool.setuptools.dynamic]
 +dependencies = { file = ["requirements.txt"] }
-+optional-dependencies.dev = { file = ["requirements-dev.txt"] }
++optional-dependencies.dev = { file = ["requirements_dev.txt"] }
