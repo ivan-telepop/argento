@@ -1,13 +1,3 @@
-
-![ - a  r  g  e  n  t  o - ](images/argento.png)
-
-## ARGENTO - docker app агент с админкой . 
-### Django-приложение для Retrieval-Augmented Generation с использованием Ollama или SDK (Pinecone, ChatGPT).
-
->  [!NOTE]
->  Приложение в процессе разработки.
-
-
 ![ - a  r  g  e  n  t  o - ](images/argento.png)
 
 ## ARGENTO - docker app агент с админкой. 
